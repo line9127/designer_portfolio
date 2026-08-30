@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Portfolio</title>
+    <meta name="description" content="A clean and modern portfolio landing page for a designer.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header class="header">
+        <div class="logo">Daniel Han.</div>
+
+        <nav class="nav">
+            <a href="#work" class="nav-link">Work</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <a href="https://drive.google.com/file/d/1I1AoVlaaddez-wLl0InyfK3JNT-HH8A4/view" target="_blank"
+                class="nav-link">Download</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero section">
+            <div class="hero-content reveal">
+                <h1 class="hero-title">Shaping digital<br>experiences.</h1>
+                <p class="hero-subtitle">Hello, I'm a UX/UI Designer focused on creating clean, functional, and
+                    beautiful digital products.</p>
+                <a href="#work" class="btn">View Selected Works</a>
+            </div>
+            <div class="hero-scroll-indicator">
+                <span>Scroll Down</span>
+                <div class="line"></div>
+            </div>
+        </section>
+
+        <section id="work" class="work section">
+            <div class="section-header reveal">
+                <h2 class="section-title">Selected Works</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="work-grid">
+                <!-- Project: AI Short-form Motion -->
+                <a href="https://youtube.com/shorts/YDE3mSWbvP8?si=FRYFw-DP3JEvFTSJ" target="_blank"
+                    rel="noopener noreferrer" class="project-card reveal" id="project-ai-motion-dog">
+                    <div class="project-image" style="background-color: #141418;">
+                        <img src="assets/ai-motion-dog.gif" alt="AI Short-form Motion - AI Motion Design"
+                            class="project-img" onerror="this.style.display='none'">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">AI Short-form Motion</h3>
+                        <p class="project-category">AI Motion Design</p>
+                    </div>
+                </a>
+
+                <!-- Project: AirCook (E-Commerce Platform) -->
+                <a href="https://www.aircook.co.kr/" target="_blank" rel="noopener noreferrer"
+                    class="project-card reveal" id="project-aircook" style="transition-delay: 0.1s;">
+                    <div class="project-image" style="background-color: #121316;">
+                        <img src="assets/aircook-product.png" alt="AirCook - E-Commerce Website WEB Design"
+                            class="project-img" onerror="this.style.display='none'">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">E-Commerce Website</h3>
+                        <p class="project-category">WEB Design</p>
+                    </div>
+                </a>
+
+                <!-- Project: Wadiz (E-Commerce Platform) -->
+                <a href="https://app.wadiz.io/links/kpGtg2IZi2" target="_blank" rel="noopener noreferrer"
+                    class="project-card reveal" id="project-wadiz" style="transition-delay: 0.2s;">
+                    <div class="project-image" style="background-color: #1a1a1a;">
+                        <img src="assets/wadiz-product.gif" alt="Wadiz E-Commerce Platform - Product Detail Page Design"
+                            class="project-img">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">Wadiz E-Commerce Platform</h3>
+                        <p class="project-category">Product Detail Page Design</p>
+                    </div>
+                </a>
+
+                <!-- Project: Hanskin Catalog (Editorial Design) -->
+                <a href="https://blog.naver.com/line9127/221180365884" target="_blank" rel="noopener noreferrer"
+                    class="project-card reveal" id="editorial-design-hanskin" style="transition-delay: 0.3s;">
+                    <div class="project-image" style="background-color: #2a2a2a;">
+                        <img src="assets/editorial-design-hanskin.png" alt="Hanskin Catalog - Editorial Design"
+                            class="project-img">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">Hanskin Catalog</h3>
+                        <p class="project-category">Editorial Design</p>
+                    </div>
+                </a>
+
+                <!-- Project: Induction Skin UI -->
+                <a href="https://blog.naver.com/line9127/221232207152" target="_blank" rel="noopener noreferrer"
+                    class="project-card reveal" id="induction=skin=ui" style="transition-delay: 0.4s;">
+                    <div class="project-image" style="background-color: #2a2a2a;">
+                        <img src="assets/product-ui.png" alt="Induction Skin UI - Product UI Design<"
+                            class="project-img">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">Induction Skin UI</h3>
+                        <p class="project-category">Product UI Design</p>
+                    </div>
+                </a>
+
+                <!-- Project: AI Short-form Motion -->
+                <a href="https://youtube.com/shorts/vQJ94wZxH9M?si=3u2ZcZ0gWkVJ_hov" target="_blank"
+                    rel="noopener noreferrer" class="project-card reveal" id="project-ai-motion-cat"
+                    style="transition-delay: 0.5s;">
+                    <div class="project-image" style="background-color: #2a2a2a;">
+                        <img src="assets/ai-motion-cat.gif" alt="AI Short-form Motion - AI Motion Design"
+                            class="project-img">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">AI Short-form Motion</h3>
+                        <p class="project-category">AI Motion Design</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="about section">
+            <div class="about-container reveal">
+                <h2 class="section-title">About Me</h2>
+                <p class="about-text">
+                    I believe in design as a tool for problem-solving. With a background in both visual design and
+                    human-computer interaction, I strive to bridge the gap between aesthetics and functionality.
+                </p>
+                <div class="skills">
+                    <span class="skill-tag">UI Design</span>
+                    <span class="skill-tag">UX Research</span>
+                    <span class="skill-tag">Prototyping</span>
+                    <span class="skill-tag">Design Systems</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="footer section">
+        <div class="footer-content reveal">
+            <h2 class="footer-title">Let's create<br>something together.</h2>
+            <a href="mailto:line9127@naver.com" class="email-link">line9127@naver.com</a>
+
+            <div class="Download-Portfolio">
+                <a href="https://drive.google.com/file/d/1I1AoVlaaddez-wLl0InyfK3JNT-HH8A4/view" target="_blank"
+                    class="Download-Portfolio">Download Portfolio <svg width="16" height="16" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M7 17L17 7"></path>
+                        <path d="M7 7h10v10"></path>
+                    </svg></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Daniel Han. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
