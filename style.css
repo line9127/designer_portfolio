@@ -112,22 +112,25 @@ a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1.5rem 5%;
+    padding: var(--space-md) 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background-color: rgba(10, 10, 10, 0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    transition: padding var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: padding var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast), backdrop-filter var(--transition-fast);
 }
 
 .header.scrolled {
     padding: 1rem 5%;
-    background-color: rgba(10, 10, 10, 0.96);
-    border-bottom-color: rgba(255, 255, 255, 0.12);
+    background-color: rgba(10, 10, 10, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
@@ -429,13 +432,21 @@ a:hover {
 /* Responsive */
 @media (max-width: 768px) {
     .header {
-        padding: 1.1rem 5%;
-        background-color: rgba(10, 10, 10, 0.9);
+        padding: 1.25rem 5%;
+        background-color: transparent;
+        border-bottom: 1px solid transparent;
+        box-shadow: none;
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
     }
 
     .header.scrolled {
-        padding: 0.9rem 5%;
-        background-color: rgba(10, 10, 10, 0.98);
+        padding: 0.85rem 5%;
+        background-color: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
     }
 
     .nav {
