@@ -38,6 +38,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Header & Hero Scroll Effect ---
+    const header = document.querySelector('.header');
+    const heroContent = document.querySelector('.hero-content');
+    const heroScrollIndicator = document.querySelector('.hero-scroll-indicator');
+
+    const handleScroll = () => {
+        const scrollY = window.scrollY;
+
+        // Toggle header scrolled styling
+        if (header) {
+            if (scrollY > 20) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }
+
+        // Smooth hero content fade out on scroll to avoid overlap
+        if (heroContent && heroContent.classList.contains('active')) {
+            const fadeThreshold = window.innerHeight * 0.45;
+            const opacity = Math.max(0, 1 - (scrollY / fadeThreshold));
+            const translateY = scrollY * 0.2;
+            heroContent.style.opacity = opacity;
+            heroContent.style.transform = `translateY(${translateY}px)`;
+        }
+
+        if (heroScrollIndicator) {
+            const indOpacity = Math.max(0, 1 - (scrollY / 120));
+            heroScrollIndicator.style.opacity = indOpacity;
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
     // --- Scroll Reveal Animation ---
     const revealElements = document.querySelectorAll('.reveal');
 

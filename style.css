@@ -112,18 +112,30 @@ a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    padding: var(--space-md) 5%;
+    padding: 1.5rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    mix-blend-mode: difference;
+    background-color: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: padding var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.header.scrolled {
+    padding: 1rem 5%;
+    background-color: rgba(10, 10, 10, 0.96);
+    border-bottom-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
 .logo {
     font-size: 1.25rem;
     font-weight: 800;
     letter-spacing: -0.05em;
+    color: var(--text-color);
 }
 
 .nav {
@@ -416,6 +428,16 @@ a:hover {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .header {
+        padding: 1.1rem 5%;
+        background-color: rgba(10, 10, 10, 0.9);
+    }
+
+    .header.scrolled {
+        padding: 0.9rem 5%;
+        background-color: rgba(10, 10, 10, 0.98);
+    }
+
     .nav {
         display: none;
         /* simple mobile behavior, could add hamburger */
