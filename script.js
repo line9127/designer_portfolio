@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (heroScrollIndicator) {
             const indOpacity = Math.max(0, 1 - (scrollY / 120));
             heroScrollIndicator.style.opacity = indOpacity;
+            heroScrollIndicator.style.pointerEvents = indOpacity <= 0.05 ? 'none' : 'auto';
         }
     };
 

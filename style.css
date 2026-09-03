@@ -200,11 +200,12 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.2em;
     color: var(--text-muted);
+    text-decoration: none;
     cursor: pointer;
     transition: color var(--transition-fast);
     z-index: 10;
@@ -214,10 +215,18 @@ a:hover {
     color: var(--text-color);
 }
 
+.hero-scroll-indicator span {
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    animation: scrollTextPulse 2.4s ease-in-out infinite;
+}
+
 .hero-scroll-indicator .line {
-    width: 1px;
-    height: 80px;
-    background-color: var(--border-color);
+    width: 2px;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 99px;
     position: relative;
     overflow: hidden;
 }
@@ -228,18 +237,42 @@ a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: var(--accent-color);
-    animation: scrollLine 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    height: 50%;
+    background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.6) 40%, #ffffff 100%);
+    border-radius: 99px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+    animation: scrollLine 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }
 
 @keyframes scrollLine {
     0% {
         transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
     }
 
     100% {
-        transform: translateY(100%);
+        transform: translateY(220%);
+        opacity: 0;
+    }
+}
+
+@keyframes scrollTextPulse {
+    0%, 100% {
+        opacity: 0.6;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(3px);
     }
 }
 
@@ -468,8 +501,64 @@ a:hover {
         /* Disable custom cursor on mobile */
     }
 
+    .hero-scroll-indicator {
+        bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+        gap: 8px;
+    }
+
+    .hero-scroll-indicator span {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.22em;
+        color: #ffffff;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.35);
+        animation: scrollBounceMobile 1.6s ease-in-out infinite;
+    }
+
     .hero-scroll-indicator .line {
-        height: 65px;
+        width: 2px;
+        height: 55px;
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-scroll-indicator .line::after {
+        height: 50%;
+        background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.85) 40%, #ffffff 100%);
+        box-shadow: 0 0 12px #ffffff, 0 0 6px #ffffff;
+        animation: scrollLineMobile 1.6s cubic-bezier(0.5, 0, 0.2, 1) infinite;
+    }
+
+    @keyframes scrollBounceMobile {
+        0%, 100% {
+            transform: translateY(0);
+            opacity: 0.75;
+        }
+
+        50% {
+            transform: translateY(5px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes scrollLineMobile {
+        0% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        15% {
+            opacity: 1;
+        }
+
+        85% {
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(220%);
+            opacity: 0;
+        }
     }
 
     body {
